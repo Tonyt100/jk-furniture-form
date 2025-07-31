@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J&K Design Co Furniture Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #323D4D;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+    .form-container {
+      background: #887443;
+      max-width: 720px;
+      margin: auto;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtext {
+      color: #444;
+      font-size: 14px;
+      margin-bottom: 2rem;
+    }
+
+     .subtext2 {
+      color: #fbf8f8;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #555;
+      background: #fff;
+    }
+
+    input[type="file"] {
+      margin-top: 0.25rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .multi-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .multi-options label {
+      font-weight: 400;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .multi-options input[type="checkbox"] {
+      margin-top: 3px;
+    }
+
+    .hint {
+      font-style: italic;
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .link-hint a {
+      color: #666;
+      text-decoration: underline;
+    }
+
+    button[type="submit"] {
+      background: #B84C2C;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #B84C2C;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+  <div style="text-align: center;">
+    <img 
+      src="https://images.squarespace-cdn.com/content/v1/65e8cde5cd0b294343b8a59b/9d5a2128-1872-458e-88ce-d4e667adb223/J%26K_alternate_circle-07.png?format=750w" 
+      alt="J&K Logo" 
+      style="max-width: 200px; height: auto; margin-bottom: 0.2rem;" 
+    />
+    <p class="subtext2">Furniture Designer</p>`
+</div>
+    <p class="subtext">Let us help you furnish your space of choice.</p>
+    <form action="YOUR_WEBHOOK_URL_HERE" method="POST" enctype="multipart/form-data">
+
+      <label for="name">Name</label>
+      <input type="text" name="name" required placeholder="What is your name" />
+      <hr style="border: none; height: 0.5px; background-color: #ccc; margin: 2rem 0;">
+
+      <label for="address">Where will the furniture be used</label>
+      <input type="text" name="address" placeholder="Tell us the address, suburb or city where the furniture will be used ..." />
+      <hr style="border: none; height: 0.5px; background-color: #ccc; margin: 2rem 0;">
+
+      <label for="email">Email address</label>
+      <input type="email" name="email" required placeholder="Tell us your email address" />
+      <hr style="border: none; height: 0.5px; background-color: #ccc; margin: 2rem 0;">
+
+      <label for="area">Which area of your home are you furnishing?</label>
+      <select name="area" required>
+        <option value="">Select an option …</option>
+        <option>Living Room</option>
+        <option>Dining Room</option>
+        <option>Rumpus Room</option>
+        <option>Alfresco</option>
+        <option>Entrance Hall</option>
+        <option>Study</option>
+        <option>Master Bedroom</option>
+        <option>Kids Bedroom</option>
+        <option>Guest Bedroom</option>
+      </select>
+      <hr style="border: none; height: 0.5px; background-color: #ccc; margin: 2rem 0;">
+
+      <label for="goal">What are you hoping to achieve with this space?</label>
+      <select name="goal" required>
+        <option value="">Select an option …</option>
+        <option>Whole New Look</option>
+        <option>Replacing Key Items e.g. Sofa, Dining Table etc</option>
+        <option>Completing The Look e.g. Rug, Side Table (No Accessories)</option>
+      </select><hr style="border: none; height: 0.5px; background-color: #ccc; margin: 2rem 0;">
+
+      <label for="budget">Target budget</label>
+      <select name="budget" required>
+        <option value="">Select an option …</option>
+        <option>Low/Mid</option>
+        <option>Mid/High</option>
+        <option>High/Luxe</option>
+      </select>
+      <hr style="border: none; height: 0.5px; background-color: #ccc; margin: 2rem 0;">
+
+      <label>What interior style and colours do you gravitate towards?</label>
+      <div class="multi-options">
+        <label><input type="checkbox" name="style[]" value="Modern Minimalist" /> MODERN MINIMALIST – clean lines, minimalism, smooth surfaces, neutral colour palette, sleek furniture – think low profile and angular.</label>
+        <label><input type="checkbox" name="style[]" value="Classic Contemporary" /> CLASSIC CONTEMPORARY / TRANSITIONAL – ever evolving trends, curves, soft edges, natural materials with light, airy palettes, statement pieces</label>
+        <label><input type="checkbox" name="style[]" value="Mid-Century" /> MID-CENTURY / RETRO – 1940 to 1960s design revival, timber furniture, slim splayed legs, earthy tones, geometric shapes, retro elements</label>
+        <label><input type="checkbox" name="style[]" value="Hamptons" /> HAMPTONS – traditional design with holiday feel, relaxed yet polished, symmetrical settings, classic architectural features, neutral textures and finishes, natural colour palette, layered with navy, charcoal, soft greys, and blues</label>
+        <label><input type="checkbox" name="style[]" value="Eclectic" /> ECLECTIC / BOHO – expressive, colourful, globally inspired textiles and layered patterns, furniture is low, relaxed, and purposefully mismatched</label>
+        <label><input type="checkbox" name="style[]" value="Industrial" /> INDUSTRIAL – urban feel with raw expressed elements, concrete, steel, leather, reclaimed wood, structural elements in detail, loft style, furniture and lighting</label>
+        <label><input type="checkbox" name="style[]" value="Scandi Japandi" /> SCANDI / JAPANDI – fusion of Japanese and Scandinavian aesthetics, minimalistic, calming colour palettes, simple, high-quality furnishing featuring timber and other natural materials</label>
+        <label><input type="checkbox" name="style[]" value="French Provincial" /> FRENCH PROVINCIAL – romantic and vintage inspired, ornate carved furniture, ornate wrought iron details, classic silhouettes, soft pastels, linen antique whites, and gentle distressing</label>
+        <label><input type="checkbox" name="style[]" value="Farmhouse" /> FARMHOUSE COUNTRY – rustic modern simplicity, clean lined furniture with rustic timber accents, neutral palette with pops of black brass linen textures</label>
+        <label><input type="checkbox" name="style[]" value="Organic Modern" /> ORGANIC MODERN – modern simplicity with the warmth of earthy tones, curves, natural materials and textures, timber, stone, boucle and handmade elements</label>
+        <label><input type="checkbox" name="style[]" value="Coastal Beach" /> COASTAL BEACH – light airy sandy palette with hints of seafoam green, grey, shell pink, tactile and honest textures like linen, jute, rattan, timber often weathered, relaxed and effortless holiday feel</label>
+      </div>
+      <hr style="border: none; height: 0.5px; background-color: #ccc; margin: 2rem 0;">
+
+      <label>Upload images of your current space</label>
+      <p class="hint">Click on the link below to follow the photography guide to help you do this ...</p>
+      <p class="link-hint"><a href="https://www.jandkdesignco.com/" target="_blank">View photo guide here</a></p>
+      <input type="file" name="room_photos[]" accept=".jpg,.png" multiple />
+      <hr style="border: none; height: 0.5px; background-color: #ccc; margin: 2rem 0;">
+
+      <label>Upload any inspiration images or moodboards that capture your desired look</label>
+      <input type="file" name="inspiration_photos[]" accept=".jpg,.png" multiple />
+      <hr style="border: none; height: 0.5px; background-color: #ccc; margin: 2rem 0;">
+
+      <label>Upload your room measurements (follow our guide)</label>
+      <p class="hint">Click on the link below to follow the measuring guide to help you do this ...</p>
+      <p class="link-hint"><a href="https://www.jandkdesignco.com/" target="_blank">View measurement guide here</a></p>
+      <input type="text" name="measurements" placeholder="Space measurements" />
+      <hr style="border: none; height: 0.5px; background-color: #ccc; margin: 2rem 0;">
+
+      <label for="subscribe">Stay connected – join our mailing list?</label>
+      <select name="subscribe" required>
+        <option value="">Select an option …</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label for="extra_notes">Describe in a few words what you're trying to achieve</label>
+      <input type="text" name="extra_notes" placeholder="What are you trying to achieve?" />
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
